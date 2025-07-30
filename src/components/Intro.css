@@ -1,0 +1,20 @@
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  /* background-color: #090c0f; */
+  background-color: #030405;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+.greeting-text {
+  font-size: 3rem;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+}

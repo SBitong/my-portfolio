@@ -1,0 +1,102 @@
+/* Reset and base layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  /* background-color: #0D1117;  */
+  color: white;
+}
+
+.content-wrapper {
+  margin: 0 2rem;
+  padding: 1rem;
+  max-width: 1600px;
+  margin-inline: auto; 
+}
+
+
+.animated-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background-color: #0d1117;
+}
+
+.gradient-layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    #475a00 0%,
+    #520b1a 25%,
+    #093927 50%,
+    #081d57 75%,
+    #460542 100%
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease-in-out infinite;
+  filter: blur(80px);
+  transform: scale(1.2);
+  will-change: transform, background-position, filter;
+
+  -webkit-mask-image: radial-gradient(circle, transparent 60%, rgb(31, 28, 32) 100%);
+  mask-image: radial-gradient(circle, transparent 60%, rgb(14, 21, 27) 100%);
+}
+
+
+
+
+.animated-background, .gradient-layer {
+  pointer-events: none;
+}
+
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional: make links smoother */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex !important;
+  }
+
+  .navLinks {
+    display: none !important;
+  }
+
+  .content-wrapper {
+    /* margin: 1rem; */
+    padding: 1rem 2rem;
+  } 
+
+
+  html, body, #root {
+    overflow: auto;
+  }
+}
+
+
+
+

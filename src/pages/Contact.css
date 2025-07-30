@@ -1,0 +1,208 @@
+.contact-page {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: rgb(230, 235, 240, 0.05);
+  border: rgba(255, 255, 255, 0.8) 1.5px solid;
+  border-right: rgba(255, 255, 255, 0.3) 1.5px solid;
+  border-bottom: rgba(255, 255, 255, 0.4) 1.5px solid;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.contact-card {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #252525;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-left, .contact-right {
+  padding: 40px;
+  flex: 1;
+}
+
+.contact-left {
+  background-color: #031a25;
+}
+
+.contact-left h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.contact-left p {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-family: 'Poppins', sans-serif;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #070606;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 24px;
+  padding: 12px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-left, .contact-right {
+    padding: 24px;
+  }
+}
+
+
+.glass-square {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(2, 77, 71, 0.37);
+  border: 1px solid rgba(3, 90, 90, 0.39);
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Optional unique positions for each square */
+.sq1 {
+  top: 40px;
+  left: -40px;
+  animation-delay: 0s;
+}
+.sq2 {
+  top: 120px;
+  right: 120px;
+  animation-delay: 1s;
+}
+.sq3 {
+  bottom: 350px;
+  left: 140px;
+  animation-delay: 2s;
+}
+.sq4 {
+  bottom: 2px;
+  right: 4px;
+  animation-delay: 3s;
+}
+.sq5 {
+  top: 610px;
+  left: -20px;
+  animation-delay: 0s;
+}
+.sq6 {
+  top: -60px;
+  right: 620px;
+  animation-delay: 1s;
+}
+.sq7 {
+  bottom: -50px;
+  left: 340px;
+  animation-delay: 2s;
+}
+.sq8 {
+  bottom: 140px;
+  right: 240px;
+  animation-delay: 0.1s;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+
+/* Ensure the contact page has relative positioning */
+.contact-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: rgb(136, 136, 136, 0.7);
+  z-index: 1000;
+  background-color: transparent; 
+}
+
+.footer img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 5px;
+  animation: spin-slow 7.5s linear infinite;
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

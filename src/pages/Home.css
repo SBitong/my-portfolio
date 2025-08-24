@@ -273,8 +273,6 @@
   }
 }
 
-
-
 @media (max-width: 550px) {
   .box {
     width: 50vw;
@@ -338,6 +336,22 @@
     order: 2;
     text-align: center; /* Optional: center the text under the image */
     align-items: center !important; /* Optional if using flex in inline styles */
+  }
+}
+
+@media (max-height: 800px) {
+  .box {
+    width: 40vw;
+  }
+}
+@media (max-height: 690px) {
+  .box {
+    width: 30vw;
+  }
+}
+@media (max-height: 500px) {
+  .box {
+    width: 15vw;
   }
 }
 
